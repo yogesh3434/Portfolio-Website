@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-accent: #6366f1;
+  --color-accent-soft: #e0e7ff;
+  --color-accent-soft-text: #4338ca;
+  --color-line: #e2e8f0;
+  --color-glow: rgba(99, 102, 241, 0.4);
+}
+
+.dark {
+  --color-bg: #0b0f19;
+  --color-surface: #111827;
+  --color-ink: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-accent: #818cf8;
+  --color-accent-soft: rgba(99, 102, 241, 0.15);
+  --color-accent-soft-text: #c7d2fe;
+  --color-line: #1e293b;
+  --color-glow: rgba(129, 140, 248, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: 'kern', 'liga';
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-soft-text);
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(99 102 241 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(99 102 241 / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(129 140 248 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(129 140 248 / 0.05) 1px, transparent 1px);
+  }
+
+  .glass-panel {
+    @apply bg-surface/80 backdrop-blur-md border border-line shadow-card;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px var(--color-glow);
+  }
+}
