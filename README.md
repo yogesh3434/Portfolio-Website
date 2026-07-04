@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Yogesh — Portfolio
 
 A personal portfolio built with Next.js (App Router) and Tailwind CSS, featuring
@@ -41,3 +42,7 @@ npm install -g vercel
 vercel
 ```
 Follow the prompts. Run `vercel --prod` to deploy to production.
+=======
+# Portfolio-Website
+Personal portfolio website built with Next.js and Tailwind CSS, showcasing my software engineering projects, technical skills and resume.
+>>>>>>> ad5638c6c4694984c8cae22d1a73f004f4b4010b
