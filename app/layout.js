@@ -22,9 +22,33 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'Yogesh Sharma — Portfolio',
+  title: {
+    default: "Yogesh Sharma",
+    template: "%s | Yogesh Sharma",
+  },
   description:
-    'Computer science student at York University, interested in software development and artificial intelligence.',
+    "Computer Science student at York University with experience in full-stack software development, AI, and cloud technologies.",
+  keywords: [
+    "Yogesh Sharma",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Computer Science",
+    "York University",
+    "Next.js",
+    "React",
+    "Node.js",
+    "Portfolio",
+  ],
+  authors: [{ name: "Yogesh Sharma" }],
+  creator: "Yogesh Sharma",
+  openGraph: {
+    title: "Yogesh Sharma | Software Engineer",
+    description:
+      "Portfolio showcasing software engineering projects, internships, and technical skills.",
+    url: "https://yogesh-pearl.vercel.app",
+    siteName: "Yogesh Sharma Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
